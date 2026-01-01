@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>منصة الكورسات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm py-3"
+      style="background: #020b3d"
+    >
+      <div class="container-fluid">
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="images/logo.jpeg" alt="logo" class="rounded-circle logo" />
+        </a>
+
+        <!-- TOGGLER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- CONTENT -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- CATEGORY -->
+          <form class="d-flex align-items-center me-3">
+            <select
+              class="form-select form-select-sm bg-transparent text-white border-warning"
+            >
+              <option>التصميم</option>
+              <option>البرمجة</option>
+              <option>الأعمال</option>
+              <option>التسويق</option>
+            </select>
+          </form>
+
+          <!-- SEARCH -->
+          <form class="d-flex flex-grow-1 me-4">
+            <div class="input-group">
+              <span class="input-group-text bg-warning text-dark">
+                <i class="fa fa-search"></i>
+              </span>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="ابحث في الدورات"
+              />
+            </div>
+          </form>
+
+          <!-- RIGHT MENU -->
+          <ul class="navbar-nav align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#">
+                <i class="fa-solid fa-basket-shopping fs-5"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
+                >
+                  2
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <select
+                class="form-select form-select-sm bg-transparent text-white border-warning"
+              >
+                <option>العربية</option>
+                <option>English</option>
+              </select>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">دوراتي</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-warning fw-bold px-3" href="#">حسابي</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <h1 class="">أسلوب جديد للتعلّم — أذكى، أسرع، وأكثر ترابطًا</h1>
+      <p>كل تواصل يفتح طريقًا أذكى وأعمق للتعلّم — بلغتك التي تفهمك</p>
+      <div class="hero-btns">
+        <button class="btn primary">ابدأ الآن</button>
+        <button class="btn outline">تصفح الدورات</button>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
+    <section class="courses bg-white ">
+      <h2>دورات أضيفت حديثًا</h2>
+
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
+              <div class="d-flex justify-content-between">
+
+                  <small class="card-text ">د. سامي عبد الله</small>
+                  <small>⏱ 5 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الاستثمارالامن</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ادارة الأعمال</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
+              <div class="d-flex justify-content-between">
+
+                  <small class="card-text ">د. سامي عبد الله</small>
+                  <small>⏱ 5 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الاستثمارالامن</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ادارة الأعمال</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFFERS ================= -->
+    <section class="offers">
+      <h2>🔥 عروض لا تفوت</h2>
+      <!-- <div class="grid offers-grid">
+        <div class="offer-card">
+          <h3>خصم 50% على جميع الدورات</h3>
+          <p>استخدم الكود: LEARN50 عند الدفع</p>
+        </div>
+        <div class="offer-card">
+          <h3>اشترك في مسار تعليمي واحصل على دورة مجانية</h3>
+          <p>اختر أي مسار تعليمي وابدأ التعلم اليوم</p>
+        </div>
+
+      </div> -->
+     <div class="row align-items-center text-center">
+  <div class="col-md-4">
+    <img src="images/example.png" class="w-100" alt="">
+    <div class="fs-5 bg-white rounded-1 bg-light p-2 m-2 text-black">10 $ بدلا من 20 $</div>
+</div>
+  <div class="col-md-4">
+    <img src="images/example.png" class="w-100" alt="">
+     <div class="fs-5 bg-white rounded-1 bg-light p-2 m-2 text-black">10 $ بدلا من 20 $</div>
+</div>
+  <div class="col-md-4"><img src="images/example.png" class="w-100" alt=""> <div class="fs-5 bg-white rounded-1 bg-light p-2 m-2 text-black">10 $ بدلا من 20 $</div>
+</div>
+</div>
+    </section>
+
+    <section class="courses bg-white ">
+      <h2>دورات أضيفت حديثًا</h2>
+
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
+              <div class="d-flex justify-content-between">
+
+                  <small class="card-text ">د. سامي عبد الله</small>
+                  <small>⏱ 5 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الاستثمارالامن</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ادارة الأعمال</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
+              <div class="d-flex justify-content-between">
+
+                  <small class="card-text ">د. سامي عبد الله</small>
+                  <small>⏱ 5 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">الاستثمارالامن</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card" >
+            <img src="./images/example.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ادارة الأعمال</h5>
+              <div class="d-flex justify-content-between">
+                  <small class="card-text ">د. احمد يوسف</small>
+                  <small>⏱ 6 ساعات</small>
+              </div>
+                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="whyUs p-5 ">
+      <h2>لماذا يجب عليك اختيارنا</h2>
+
+      <div class="courses-grid gap-3 bg-transparent">
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="course-card bg-transparent">
+          <div class="card  bg-transparent text-white p-2" >
+            <i class="fa fa-book text-white"></i>
+            <div class="card-body">
+              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
+              <p>
+                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
+              </p>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+    </section>
+    <!-- ================= PATHS ================= -->
+  
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials ">
+      <h2>ماذا يقول متدربونا؟</h2>
+
+      <div class="testimonial">
+        <p>من أفضل المنصات التعليمية اللي جربتها</p>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+
+      <div class="testimonial">
+        <p>محتوى قوي وسهل الفهم</p>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+    </section>
+
+      <section class="paths">
+      <h2>مسارات التعلم</h2>
+      <div class="paths-grid">
+        <div class="path-card">الاستثمار وريادة الأعمال</div>
+        <div class="path-card">المصرفية الإسلامية</div>
+        <div class="path-card">الشهادات المهنية</div>
+        <div class="path-card">المعايير الشرعية</div>
+      </div>
+    </section>
+    <!-- ================= CTA ================= -->
+    <section class="final-cta">
+      <h2>ابدأ رحلتك التعليمية الآن</h2>
+      <button class="btn primary">سجّل الآن</button>
+    </section>
+
+    
+    <footer>© 2026 جميع الحقوق محفوظة</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
