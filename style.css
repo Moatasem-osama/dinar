@@ -417,6 +417,12 @@ footer{
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero h1{
+  font-size:2rem;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 100rem;
+}
   .why-dinar .section-title {
     font-size: 28px;
   }
