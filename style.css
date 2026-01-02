@@ -2,6 +2,12 @@
   --main-color:#020b3d;
   --secondary-color:#dea91f;
   --third-color:#ffffff;
+
+  --card-bg: #ffffff12;
+  --card-hover-shadow: #ffc10740;
+  --text-light: #ffffffd9;
+  --text-muted: rgba(255,255,255,0.65);
+  --dark: #0a0a0a;
 }
 
 *{
@@ -15,6 +21,9 @@ body{
   background:var(--main-color);
   color:white;
 }
+section{
+  padding:80px 20px;
+}
 
 /* NAVBAR */
 .navbar input::placeholder {
@@ -26,10 +35,91 @@ body{
 }
 
 .logo{
-    height:100px;
-    width:auto;
-
+  width: 200px;
+}/* RESET OUTLINES */
+.navbar a,
+.navbar button {
+  outline: none !important;
+  box-shadow: none !important;
 }
+
+/* ICONS */
+.nav-icon-lg {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+/* ICON + TEXT AS ONE UNIT */
+.nav-item-link,
+.nav-account,
+.nav-icon-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+.nav-item span{
+ font-size: large;
+}
+
+/* HOVER */
+.nav-item-link:hover,
+.nav-account:hover,
+.nav-icon-link:hover {
+  opacity: 1;
+  color: #ffc107;
+}
+.nav-account:hover{
+  color: rgb(24, 24, 24);
+}
+
+.nav-item-link:hover .nav-icon-lg,
+.nav-account:hover .nav-icon-lg,
+.nav-icon-link:hover .nav-icon-lg {
+  transform: scale(1.15);
+}
+
+/* ACCOUNT SPECIAL */
+.nav-account {
+  background: linear-gradient(135deg, #ffc107, #ffda44);
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.nav-account .nav-icon-lg {
+  filter: none;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  font-size: 11px;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 20px;
+    background: #020b3d;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .navbar-nav {
+    gap: 20px !important;
+    align-items: start !important;
+  }
+}
+
 
 /* HERO */
 .hero{
@@ -85,43 +175,130 @@ body{
 }
 
 /* COURSES */
-.courses{
-  padding:50px;
-  text-align:center;
+
+/* ====== COURSES SECTION ====== */
+.courses {
+  
+  background: var(--main-color);
+}
+
+/* ====== GRID ====== */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* ====== CARD ====== */
+.course-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px var(--card-hover-shadow);
+}
+
+/* ====== IMAGE ====== */
+.course-img-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.course-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover .course-img {
+  transform: scale(1.05);
+}
+
+/* ====== CONTENT ====== */
+.course-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Instructor */
+.instructor {
+  font-size: 14px;
+  text-align: right;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+/* Course Title */
+.course-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover Text Highlight */
+.course-card:hover .course-title,
+.course-card:hover .instructor {
+  color: var(--secondary-color);
+}
+
+/* ====== INFO ROW ====== */
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.course-info .duration span,
+.course-info .price span {
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+/* ====== BUTTON ====== */
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: var(--secondary-color);
   color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
 }
-.courses-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-  gap:0px;
-  margin-top:40px;
+
+/* يظهر عند Hover */
+.course-card:hover .add-btn {
+  opacity: 1;
+  transform: translateY(0);
 }
-.course-card{
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(10px);
-  border-radius:20px;
-  padding:25px;
-  transition:.4s;
+
+/* Optional: Button Hover Effect */
+.add-btn:hover {
+  background: #ffda44;
+  transform: scale(1.05);
 }
-.course-card:hover{
-  transform:translateY(-10px);
-}
-.course-card button{
-  margin-top:15px;
-  width:100%;
-  background:var(--secondary-color);
-  border:none;
-  padding:10px;
-  border-radius:10px;
-}
-.price{
-  background:var(--secondary-color);
-  color:#020b3d;
-  padding:5px 12px;
-  border-radius:20px;
-  display:inline-block;
-  margin-bottom:10px;
-}
+
 
 /* OFFERS */
 .offers{
@@ -177,4 +354,72 @@ footer{
   padding:20px;
   text-align:center;
   opacity:.6;
+}
+
+
+.why-dinar {
+  background: #010722;
+  padding: 80px 20px;
+  color: var(--text-light);
+}
+
+.why-dinar .section-title , .section-head {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ITEM */
+.why-item {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: right;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.why-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255, 193, 7, 0.3);
+}
+
+/* ICON */
+.why-item .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.why-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+/* TEXT */
+.why-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .why-dinar .section-title {
+    font-size: 28px;
+  }
+  .why-item .icon {
+    font-size: 28px;
+  }
 }

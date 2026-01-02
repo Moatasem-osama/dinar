@@ -17,9 +17,9 @@ cards.forEach(card=>{
   card.style.opacity = 0;
   card.style.transform = 'translateY(50px)';
 });
-
-cards.forEach(card=>{
-  card.addEventListener('click', () => {
+const btns=document.querySelectorAll('.add-btn');
+btns.forEach(btn=>{
+  btn.addEventListener('click', () => {
     window.location.href = 'https://gstudentapp.coursetopia.net/course/68ac6d2dc325c6952ae00b9c/';
   })
 ;});

@@ -27,87 +27,82 @@
   </head>
   <body>
     <!-- ================= NAVBAR ================= -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark shadow-sm py-3"
-      style="background: #020b3d"
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm " style="background:#020b3d">
+  <div class="container-fluid">
+
+    <!-- RIGHT SIDE (LOGO + LEARNING PATHS) -->
+    <div class="d-flex align-items-center gap-4">
+
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="images/logo.jpeg" alt="logo" class=" logo" >
+      </a>
+
+      <!-- LEARNING PATHS -->
+    
+
+    </div>
+
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
     >
-      <div class="container-fluid">
-        <!-- LOGO -->
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-          <img src="images/logo.jpeg" alt="logo" class="rounded-circle logo" />
-        </a>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- TOGGLER -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- LEFT SIDE -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav align-items-center gap-5 ">
 
-        <!-- CONTENT -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <!-- CATEGORY -->
-          <form class="d-flex align-items-center me-3">
-            <select
-              class="form-select form-select-sm bg-transparent text-white border-warning"
-            >
-              <option>التصميم</option>
-              <option>البرمجة</option>
-              <option>الأعمال</option>
-              <option>التسويق</option>
-            </select>
-          </form>
+        <!-- CART -->
+        <li class="nav-item">
+           <a href="#" class="nav-item-link">
+        <img src="images/effectiveness.png" class="nav-icon-lg" alt="">
+        <span>مسارات التعلم</span>
+      </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-icon-link position-relative">
+            <img src="images/purchase.png" class="nav-icon-lg" alt="">
+            <span>السلة</span>
+            <span class="badge rounded-pill bg-warning text-dark">2</span>
+          </a>
+        </li>
 
-          <!-- SEARCH -->
-          <form class="d-flex flex-grow-1 me-4">
-            <div class="input-group">
-              <span class="input-group-text bg-warning text-dark">
-                <i class="fa fa-search"></i>
-              </span>
-              <input
-                type="search"
-                class="form-control"
-                placeholder="ابحث في الدورات"
-              />
-            </div>
-          </form>
+        <!-- LANGUAGE -->
+        <li class="nav-item">
+          <a href="#" class="nav-item-link">
+            <img src="images/translation.png" class="nav-icon-lg" alt="">
+            <span>AR</span>
+          </a>
+        </li>
 
-          <!-- RIGHT MENU -->
-          <ul class="navbar-nav align-items-center gap-3">
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="#">
-                <i class="fa-solid fa-basket-shopping fs-5"></i>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
-                >
-                  2
-                </span>
-              </a>
-            </li>
+        <!-- MY COURSES -->
+        <li class="nav-item">
+          <a href="#" class="nav-item-link">
+            <img src="images/effectiveness.png" class="nav-icon-lg" alt="">
+            <span>دوراتي</span>
+          </a>
+        </li>
 
-            <li class="nav-item">
-              <select
-                class="form-select form-select-sm bg-transparent text-white border-warning"
-              >
-                <option>العربية</option>
-                <option>English</option>
-              </select>
-            </li>
+        <!-- ACCOUNT -->
+        <li class="nav-item">
+          <a href="#" class="nav-account">
+            <img src="images/account-settings.png" class="nav-icon-lg" alt="">
+            <span>حسابي</span>
+          </a>
+        </li>
 
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="#">دوراتي</a>
-            </li>
+      </ul>
+    </div>
 
-            <li class="nav-item">
-              <a class="btn btn-warning fw-bold px-3" href="#">حسابي</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  </div>
+</nav>
+
+
 
     <!-- ================= HERO ================= -->
     <section class="hero">
@@ -120,96 +115,191 @@
     </section>
 
     <!-- ================= COURSES ================= -->
-    <section class="courses bg-white ">
-      <h2>دورات أضيفت حديثًا</h2>
+    <section class="courses ">
+      <h2 class="section-head">دورات أضيفت حديثًا</h2>
+<div class="courses-grid">
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/dr.khader.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
 
-      <div class="courses-grid">
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
-              <div class="d-flex justify-content-between">
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">د. غدير الشيخ</h6>
+      <h4 class="course-title">بوصلة المال الحلال</h4>
 
-                  <small class="card-text ">د. سامي عبد الله</small>
-                  <small>⏱ 5 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>5 ساعات</span>
         </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الاستثمارالامن</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+        <div class="price">
+          <span>$20</span>
         </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">ادارة الأعمال</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
-              <div class="d-flex justify-content-between">
+      </div>
 
-                  <small class="card-text ">د. سامي عبد الله</small>
-                  <small>⏱ 5 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/reda.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">رضا محمود دياب</h6>
+      <h4 class="course-title">الشهادات المالية المهنية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
         </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الاستثمارالامن</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+        <div class="price">
+          <span>$10</span>
         </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">ادارة الأعمال</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/alaa.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">آلاء المصري</h6>
+      <h4 class="course-title">كيف تبني علامتك الشخصية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
         </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/ahmedelshafy.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">أحمد الشافعي</h6>
+      <h4 class="course-title">هندسة العقود المهنية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>5 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$20</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/eng.ahmed.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">م. أحمد يونس</h6>
+      <h4 class="course-title">5 خطوات للتركيز النشط</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/mahmoud.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">م. محمود فهمي</h6>
+      <h4 class="course-title">مبادئ الإدارة في الإسلام</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/manal.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">منال عبدالحفيظ</h6>
+      <h4 class="course-title">الشركات العائلية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+
       </div>
     </section>
 
     <!-- ================= OFFERS ================= -->
     <section class="offers">
-      <h2>🔥 عروض لا تفوت</h2>
+      <h2 class="section-head">🔥 عروض لا تفوت</h2>
       <!-- <div class="grid offers-grid">
         <div class="offer-card">
           <h3>خصم 50% على جميع الدورات</h3>
@@ -235,165 +325,237 @@
 </div>
     </section>
 
-    <section class="courses bg-white ">
-      <h2>دورات أضيفت حديثًا</h2>
+    <section class="courses">
+      <h2 class="section-head">دوراتنا</h2>
+<div class="courses-grid">
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/dr.khader.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
 
-      <div class="courses-grid">
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
-              <div class="d-flex justify-content-between">
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">د. غدير الشيخ</h6>
+      <h4 class="course-title">بوصلة المال الحلال</h4>
 
-                  <small class="card-text ">د. سامي عبد الله</small>
-                  <small>⏱ 5 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>5 ساعات</span>
         </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الاستثمارالامن</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">ادارة الأعمال</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الصف الثالث الثانوي فيزياء</h5>
-              <div class="d-flex justify-content-between">
-
-                  <small class="card-text ">د. سامي عبد الله</small>
-                  <small>⏱ 5 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">الاستثمارالامن</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
-        </div>
-        <div class="course-card">
-          <div class="card" >
-            <img src="./images/example.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">ادارة الأعمال</h5>
-              <div class="d-flex justify-content-between">
-                  <small class="card-text ">د. احمد يوسف</small>
-                  <small>⏱ 6 ساعات</small>
-              </div>
-                <button class="btn btn-warning mt-3">اشترك الآن 15$</button>
-            </div>
-          </div>
+        <div class="price">
+          <span>$20</span>
         </div>
       </div>
-    </section>
-    <section class="whyUs p-5 ">
-      <h2>لماذا يجب عليك اختيارنا</h2>
 
-      <div class="courses-grid gap-3 bg-transparent">
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/reda.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">رضا محمود دياب</h6>
+      <h4 class="course-title">الشهادات المالية المهنية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
         </div>
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+        <div class="price">
+          <span>$10</span>
         </div>
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/alaa.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">آلاء المصري</h6>
+      <h4 class="course-title">كيف تبني علامتك الشخصية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
         </div>
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+        <div class="price">
+          <span>$10</span>
         </div>
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/ahmedelshafy.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">أحمد الشافعي</h6>
+      <h4 class="course-title">هندسة العقود المهنية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>5 ساعات</span>
         </div>
-        <div class="course-card bg-transparent">
-          <div class="card  bg-transparent text-white p-2" >
-            <i class="fa fa-book text-white"></i>
-            <div class="card-body">
-              <h5 class="card-title">موارد تعليمية عالية الجودة</h5>
-              <p>
-                احصل على وصول إلى مكتبة شاملة من المواد التعليمية التي تم إنشاؤها بواسطة خبراء في المجال.
-              </p>
-            </div>
-          </div>
+        <div class="price">
+          <span>$20</span>
         </div>
-     
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/eng.ahmed.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">م. أحمد يونس</h6>
+      <h4 class="course-title">5 خطوات للتركيز النشط</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/mahmoud.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">م. محمود فهمي</h6>
+      <h4 class="course-title">مبادئ الإدارة في الإسلام</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+  <div class="course-card">
+    <!-- IMAGE -->
+    <div class="course-img-wrapper">
+      <img src="./images/courses/manal.jpeg" class="course-img" alt="د. غدير الشيخ">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-content">
+      <h6 class="instructor">منال عبدالحفيظ</h6>
+      <h4 class="course-title">الشركات العائلية</h4>
+
+      <!-- INFO ROW -->
+      <div class="course-info">
+        <div class="duration">
+          ⏱ <span>2 ساعات</span>
+        </div>
+        <div class="price">
+          <span>$10</span>
+        </div>
+      </div>
+
+      <!-- ADD BUTTON -->
+      <button class="add-btn">اضافة الى السلة</button>
+    </div>
+  </div>
+
       </div>
     </section>
+   <section class="why-dinar">
+  <div class="container">
+    <h2 class="section-title">لماذا تختار دينار</h2>
+
+    <div class="why-grid">
+      <!-- Item 1 -->
+      <div class="why-item">
+        <div class="icon"><img src="images/learning-journey.png" width="50" alt=""></div>
+        <h4>رحلة تعلّم ممتعة وملهمة</h4>
+        <p>نجعل تعلم فقه المال والاقتصاد ممتعًا بتجربة تفاعلية تحفّز الفضول وتجعلك متشوقًا لكل خطوة في رحلتك معنا.</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="why-item">
+         <div class="icon"><img src="images/book.png" width="50" alt=""></div>
+        <h4>منهجية متكاملة بخارطة واضحة</h4>
+        <p>نسير معك وفق مسار تدريبي منظم، يربط بين التراث والمعاصر والأساس والتطبيق، ويقودك نحو التمكّن.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="why-item">
+         <div class="icon"><img src="images/teacher.png" width="50" alt=""></div>
+        <h4>كفاءات تدريبية عالية التأثير</h4>
+        <p>لدينا كوكبة علمية ومؤثرين ذووا مهارات وكفايات تقدم محتوى تدريبيًا مصممًا بعناية يمنحك المعرفة والمهارات.</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="why-item">
+         <div class="icon"><img src="images/experience.png" width="50" alt=""></div>
+        <h4>خبرة عملية وفهم عميق للواقع</h4>
+        <p>نستند إلى التجربة الواقعية والتحديات الحقيقية، لنقدّم تدريبًا يعالج الواقع كما هو، لا كما يُتخيَّل.</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="why-item">
+         <div class="icon"><img src="images/growth.png" width="50" alt=""></div>
+        <h4>تطوير مستدام للمهارات والمعرفة</h4>
+        <p>نركّز على بناء مهارات تنمو معك، وتُحدِث فرقًا ملموسًا في أدائك المهني والفكري على المدى الطويل.</p>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="why-item">
+        <div class="icon"><img src="images/positive-review.png" width="50" alt=""></div>
+        <h4>تجربة متدرب مريحة وداعمة</h4>
+        <p>ستشعر معنا بالمتعة؛ فحن نهتم بك في كل مرحلة: وندعمك بما يضمن لك تعلّمًا سلسًا دون تعقيد أو تشويش.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- ================= PATHS ================= -->
   
 
